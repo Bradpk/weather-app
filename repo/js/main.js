@@ -18,4 +18,4 @@ async function getWeatherData(zipCode) {
 
     }
 }
-
+console.log('Hello')

@@ -17,6 +17,10 @@ const apiUrl = ''
 
 
 function verifyZipcode(zipcode) {
+    zipcode = zipcode.trim()
+    if (zipcode.length != 5 || isNaN(zipcode)) {
+        alert('Invalid Zip Code')
+    }
 }
 
 

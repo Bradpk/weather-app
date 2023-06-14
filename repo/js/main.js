@@ -1,5 +1,4 @@
 
-
 /*const temp = document.getElementById('temp')
 
 function getWeatherData(zipCode) {

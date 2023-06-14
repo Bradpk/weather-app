@@ -1,3 +1,6 @@
+let zipcode = document.getElementById('zipcode')
+let title = document.getElementById('title')
+let button = document.getElementById('button')
 
 /*const temp = document.getElementById('temp')
 

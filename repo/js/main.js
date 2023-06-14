@@ -1,21 +1,20 @@
-const axios = require('axios')
 
-async function getWeatherData(zipCode) {
-    try {
-        const apiKey = 'aea26e52813982d4b13611732c43f397'
-    const apiURL = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=aea26e52813982d4b13611732c43f397'
 
-    const response = await axios.get(apiUrl)
+/*const temp = document.getElementById('temp')
 
-    const weatherData = reponse.data 
+function getWeatherData(zipCode) {
+    const apiKey = 'aea26e52813982d4b13611732c43f397'
+    const apiURL = 'https://api.openweathermap.org/data/2.5/weather?zip=40503&appid=ea26e52813982d4b13611732c43f397'
 
-    const temp = document.getElementById('temp')
-    const temperature = weatherData.main.temp
-
-    temp.innerHTML = 'g'
-
-    } catch (error) {
-
-    }
+ axios.get('https://api.openweathermap.org/data/2.5/weather?zip=40503&appid=ea26e52813982d4b13611732c43f397')
+ .then ((response) => {
+    const getWeatherData = response.data 
+    const temperature = weatherData.main.temperature
+    temperature.textcontent = temperature 
+ })
+ .catch ((error) => {
+    temp.textContent = 'Error'
+ })
 }
-console.log('Hello')
+
+console.log('Hello')*/

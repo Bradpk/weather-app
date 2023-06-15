@@ -1,4 +1,4 @@
-// Wtf am I doing
+// Wtf am I even doing
 // Do I even want these to be global? 
 let zipcode = document.getElementById('zipcode').value
 let getWeatherButton = document.getElementById('getWeatherButton')
@@ -13,8 +13,8 @@ let conditionInfo = document.getElementById('conditionInfo')
 let otherInfo = document.getElementById('otherInfo')
 let image = document.getElementById('image')
 
-let apiKey = aea26e52813982d4b13611732c43f397
-let apiUrl = ''
+let apiKey = 'aea26e52813982d4b13611732c43f397'
+let apiUrl = 'http://api.openweathermap.org/geo/1.0/zip?zip={zip code},{country code}&appid={API key}'
 
 
 // Not Complete and Confused 
@@ -27,35 +27,35 @@ function verifyZipcode() {
 // Not Complete and Confused 
 function retrieveData() {
 
-    axios.get()
-    .then
-    .catch
+    axios.get('http://api.openweathermap.org/geo/1.0/zip?zip={zip code},{country code}&appid={API key}')
+        .then(function (response) { })
+        .catch(function (response) { })
 
-   let storage = {
-city: '',
-temperature: '',
-condition: '',
-otherInfo: '',
+    let storage = {
+        city: '',
+        temperature: '',
+        condition: '',
+        otherInfo: '',
     }
 }
 
 // Not Complete and Confused 
 function displayData() {
 
- city.textContent = ''
- cityInfo.textContent = ''
- temperature.textContent = ''
- kelvin.textContent = ''
- fahrenheit.textContent = ''
- celsius.textContent = ''
- condition.textContent = ''
- conditionInfo.textContent = ''
- otherInfo.textContent = ''
- image.textContent = ''
+    city.textContent = ''
+    cityInfo.textContent = ''
+    temperature.textContent = ''
+    kelvin.textContent = ''
+    fahrenheit.textContent = ''
+    celsius.textContent = ''
+    condition.textContent = ''
+    conditionInfo.textContent = ''
+    otherInfo.textContent = ''
+    image.textContent = ''
 }
 
 
 // Not Complete and Confused 
 getWeatherButton.addEventListener('click', () => {
-verifyZipcode(zipcode.value)
+    verifyZipcode(zipcode.value)
 })

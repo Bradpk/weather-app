@@ -53,25 +53,25 @@ let storage = {
 // Not Complete and Confused 
 function displayData(data) {
 
-    city.textContent = ''
-    cityInfo.textContent = ''
-    temperature.textContent = ''
-    kelvin.textContent = ''
-    fahrenheit.textContent = ''
-    celsius.textContent = ''
-    condition.textContent = ''
-    conditionInfo.textContent = ''
-    otherInfo.textContent = ''
+    city.textContent = `city: ${data.name}`
+    cityInfo.textContent = `Zip Code: ${zipCodeInput.value}`
+    temperature.textContent = `Temperature: ${data.main.temp} K`
+    kelvin.textContent = `Kelvin: ${data.main.temp} K`
+    fahrenheit.textContent = `Fahrenheit: ${convertToFahrenheit(data.main.temp)}`
+    celsius.textContent = `Celsius: ${convertToCelsius(data.main.temp)}`
+    condition.textContent = `Condition: ${data.weather[0].main}`
+    conditionInfo.textContent = `Description: ${data.weather[0].description}`
+    otherInfo.textContent = `Other Info: Humidty - ${data.main.humidity}, Pressure - ${data.main.pressure} hPA`
     image.textContent = ''
 }
 
 
-function convertFahrenheit(kelvin) {
+function convertToFahrenheit(kelvin) {
 return (kelvin - 273.15) * (9/5) + 32
 }
 
 
-function convertCelsius(kelvin) {
+function convertToCelsius(kelvin) {
     return (kelvin - 273.15)
 }
 

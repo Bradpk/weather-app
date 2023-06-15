@@ -81,7 +81,7 @@ getWeatherButton.addEventListener('click', async() => {
     let zipcode = zipcodeInput.value.trim()
     if(verifyZipcode(zipcode) === true) {
         try {
-            let data = await retrieveData(zipcode)
+            const data = await retrieveData(zipcode)
             displayData(data)
             appear()
         } catch (error) {

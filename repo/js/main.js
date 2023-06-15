@@ -1,21 +1,21 @@
-const zipcode = document.getElementById('zipcode')
-const getWeatherButton = document.getElementById('getWeatherButton')
-const city = document.getElementById('city')
-const cityInfo = document.getElementById('cityInfo')
-const temperature = document.getElementById('temperature')
-const kelvin = document.getElementById('kelvin')
-const fahrenheit = document.getElementById('fahrenheit')
-const celsius = document.getElementById('celsius')
-const condition = document.getElementById('condition')
-const conditionInfo = document.getElementById('conditionInfo')
-const otherInfo = document.getElementById('otherInfo')
-const image = document.getElementById('image')
+let zipcode = document.getElementById('zipcode')
+let getWeatherButton = document.getElementById('getWeatherButton')
+let city = document.getElementById('city')
+let cityInfo = document.getElementById('cityInfo')
+let temperature = document.getElementById('temperature')
+let kelvin = document.getElementById('kelvin')
+let fahrenheit = document.getElementById('fahrenheit')
+let celsius = document.getElementById('celsius')
+let condition = document.getElementById('condition')
+let conditionInfo = document.getElementById('conditionInfo')
+let otherInfo = document.getElementById('otherInfo')
+let image = document.getElementById('image')
 
-const apiKey = aea26e52813982d4b13611732c43f397
-const apiUrl = ''
+let apiKey = aea26e52813982d4b13611732c43f397
+let apiUrl = ''
 
 
-
+// Not Working
 function verifyZipcode(zipcode) {
     zipcode = zipcode.trim()
     if (zipcode.length != 5 || isNaN(zipcode)) {
@@ -23,15 +23,16 @@ function verifyZipcode(zipcode) {
     }
 }
 
-
+// Not Working
 function retrieveData(zipcode) {
 }
 
-
+// Not Working 
 function displayData() {
 }
 
 
-
-document.getElementById('getWeatherButton').addEventListener('click', function(){
+// Not Working
+document.getElementById('getWeatherButton').addEventListener('click', function() {
+verifyZipcode(zipcode.value)
 })

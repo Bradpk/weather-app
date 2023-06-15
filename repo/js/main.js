@@ -41,13 +41,14 @@ return weatherData.data
 
 
 
-//Object for storing data. Don't this is needed anymore
+/*Object for storing data. Don't this is needed anymore
 let storage = {
     city: '',
     temperature: '',
     condition: '',
     otherInfo: '',
 }
+*/ 
 
 // Not Complete and Confused 
 function displayData() {

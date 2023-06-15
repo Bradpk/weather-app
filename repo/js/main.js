@@ -1,4 +1,4 @@
-let zipcode = document.getElementById('zipcode')
+let zipcode = document.getElementById('zipcode').value
 let getWeatherButton = document.getElementById('getWeatherButton')
 let city = document.getElementById('city')
 let cityInfo = document.getElementById('cityInfo')
@@ -16,23 +16,44 @@ let apiUrl = ''
 
 
 // Not Working
-function verifyZipcode(zipcode) {
-    zipcode = zipcode.trim()
+function verifyZipcode() {
     if (zipcode.length != 5 || isNaN(zipcode)) {
         alert('Invalid Zip Code')
     }
 }
 
 // Not Working
-function retrieveData(zipcode) {
+function retrieveData() {
+
+    axios.get()
+    .then
+    .catch
+
+   let storage = {
+city: '',
+temperature: '',
+condition: '',
+otherInfo: '',
+    }
 }
 
 // Not Working 
 function displayData() {
+
+ city.textContent = ''
+ cityInfo.textContent = ''
+ temperature.textContent = ''
+ kelvin.textContent = ''
+ fahrenheit.textContent = ''
+ celsius.textContent = ''
+ condition.textContent = ''
+ conditionInfo.textContent = ''
+ otherInfo.textContent = ''
+ image.textContent = ''
 }
 
 
 // Not Working
-document.getElementById('getWeatherButton').addEventListener('click', function() {
+document.getElementById('getWeatherButton').addEventListener('click', () => {
 verifyZipcode(zipcode.value)
 })

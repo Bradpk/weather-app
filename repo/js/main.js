@@ -26,7 +26,7 @@ function verifyZipcode(zipcode) {
 
 // Not Complete and Confused 
 function retrieveData(verifyZipcode) {
-
+let axios = require('axios')
     axios.get('http://api.openweathermap.org/geo/1.0/zip?zip={zip code},{country code}&appid={API key}')
         .then(function (response) { })
         .catch(function (response) { })

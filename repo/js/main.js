@@ -15,14 +15,14 @@ let apiKey = aea26e52813982d4b13611732c43f397
 let apiUrl = ''
 
 
-// Not Working
+// Not Complete and Confused 
 function verifyZipcode() {
     if (zipcode.length != 5 || isNaN(zipcode)) {
         alert('Invalid Zip Code')
     }
 }
 
-// Not Working
+// Not Complete and Confused 
 function retrieveData() {
 
     axios.get()
@@ -37,7 +37,7 @@ otherInfo: '',
     }
 }
 
-// Not Working 
+// Not Complete and Confused 
 function displayData() {
 
  city.textContent = ''
@@ -53,7 +53,7 @@ function displayData() {
 }
 
 
-// Not Working
+// Not Complete and Confused 
 document.getElementById('getWeatherButton').addEventListener('click', () => {
 verifyZipcode(zipcode.value)
 })

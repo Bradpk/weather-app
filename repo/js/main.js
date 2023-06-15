@@ -12,8 +12,8 @@ let condition = document.getElementById('condition')
 let conditionInfo = document.getElementById('conditionInfo')
 let otherInfo = document.getElementById('otherInfo')
 let image = document.getElementById('image')
-let data = null
 
+let data = null
 let apiKey = 'aea26e52813982d4b13611732c43f397'
 let apiUrl = 'http://api.openweathermap.org/'
 let apiPath = '/data/2.5/weather'
@@ -22,10 +22,11 @@ let apiPath = '/data/2.5/weather'
 window.addEventListener('load', init)
 async function init () {
      data = await retrieveData(40503)
+     console.log(data)
 }
 
 // Not Complete and Confused 
-function verifyZipcode(zipcode) {
+function verifyZipcode() {
     if (zipcode.length != 5 || isNaN(zipcode)) {
         alert('Invalid Zip Code')
     } 
@@ -42,17 +43,31 @@ let options = {
         appid: apiKey
     }
 }
-await axios.get(apiPath, options)
+weatherData = await axios.get(apiPath, options)
+.then(function (response) {
+    return response.data
+})
+.then(function (data){
+    
+})
+
 } catch (err) {
     // check screenshot for more info on the below
-message.innerHTML = 'Error: ' + err + '.'
+//message.innerHTML = 'Error: ' + err + '.'
 }
-    let storage = {
-        city: '',
-        temperature: '',
-        condition: '',
-        otherInfo: '',
-    }
+    return weatherData
+}
+
+
+
+
+
+//Object for storing data
+let storage = {
+    city: '',
+    temperature: '',
+    condition: '',
+    otherInfo: '',
 }
 
 // Not Complete and Confused 
@@ -117,4 +132,3 @@ function appear() {
 
 console.log("hello world")
 
-return weatherData

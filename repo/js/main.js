@@ -14,7 +14,8 @@ let otherInfo = document.getElementById('otherInfo')
 let image = document.getElementById('image')
 
 let apiKey = 'aea26e52813982d4b13611732c43f397'
-let apiUrl = 'http://api.openweathermap.org/geo/1.0/zip?zip={zip code},{country code}&appid={API key}'
+let apiUrl = 'http://api.openweathermap.org/'
+let apiPath = '/data/2.5/weather'
 
 
 // Not Complete and Confused 
@@ -25,12 +26,20 @@ function verifyZipcode(zipcode) {
 }
 
 // Not Complete and Confused 
-function retrieveData(verifyZipcode) {
-let axios = require('axios')
-    axios.get('http://api.openweathermap.org/geo/1.0/zip?zip={zip code},{country code}&appid={API key}')
-        .then(function (response) { })
-        .catch(function (response) { })
-
+function retrieveData(zipcode) {
+try {
+let options = {
+    baseurl: apiUrl,
+    params: {
+        zip: zipcode,
+        appid: apiKey
+    }
+}
+axios.get(apiPath, options)
+} catch (err) {
+    // check screenshot for more info on the below
+message.innerHTML = 'Error: ' + err + '.'
+}
     let storage = {
         city: '',
         temperature: '',
@@ -94,3 +103,5 @@ function appear() {
     otherInfo.style.display = ''
     image.style.display = ''
 }
+
+console.log("hello world")

@@ -54,6 +54,14 @@ function displayData() {
     image.textContent = ''
 }
 
+function convertFahrenheit(kelvin) {
+return (kelvin - 273.15) * (9/5) + 32
+}
+
+function convertCelsius(kelvin) {
+    return (kelvin - 273.15)
+}
+
 
 // Not Complete and Confused 
 getWeatherButton.addEventListener('click', () => {

@@ -15,15 +15,9 @@ let image = document.getElementById('image')
 
 let data = null
 let apiKey = 'aea26e52813982d4b13611732c43f397'
-let apiUrl = 'http://api.openweathermap.org/'
+let apiUrl = `http://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`
 let apiPath = '/data/2.5/weather'
 
-// This is just for figuring out the API. The retrieveData function should be called elsewhere. 
-window.addEventListener('load', init)
-async function init () {
-     data = await retrieveData(40503)
-     console.log(data)
-}
 
 // Not Complete and Confused 
 function verifyZipcode() {
@@ -33,29 +27,16 @@ function verifyZipcode() {
 }
 
 // Not Complete and Confused 
-async function retrieveData(zipcode) {
-let weatherData = {}
-try {
-let options = {
-    baseurl: apiUrl,
-    params: {
-        zip: zipcode,
-        appid: apiKey
-    }
-}
-weatherData = await axios.get(apiPath, options)
-.then(function (response) {
-    return response.data
-})
-.then(function (data){
-    
-})
+async function retrieveData() {
+await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`)
+.then(response => {
+    weatherdata = response.data
 
-} catch (err) {
-    // check screenshot for more info on the below
-//message.innerHTML = 'Error: ' + err + '.'
-}
-    return weatherData
+})
+ .catch (err => {
+  alert('Invalid Zip Code')
+})
+  
 }
 
 
@@ -131,4 +112,5 @@ function appear() {
 }
 
 console.log("hello world")
+
 

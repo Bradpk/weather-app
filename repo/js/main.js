@@ -77,7 +77,7 @@ function convertCelsius(kelvin) {
 
 
 // Not Complete and Confused 
-getWeatherButton.addEventListener('click', () => {
+getWeatherButton.addEventListener('click', async() => {
     let zipcode = zipcodeInput.value.trim()
     if(verifyZipcode(zipcode) === true) {
         try {

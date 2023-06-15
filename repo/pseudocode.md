@@ -116,3 +116,5 @@ appear
 " The domino effect of triggering the functions can be done within the event handler, not the functions themselves. "
 
 " Don't need to create an object inside the retrieveData function because the data retrieved already is an object. "
+
+" The displayData function is also an object "

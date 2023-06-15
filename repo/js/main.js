@@ -1,6 +1,6 @@
 // Wtf am I even doing
 // Do I even want these to be global? 
-let zipcodeInput = document.getElementById('zipcode').value
+let zipcodeInput = document.getElementById('zipcode')
 let getWeatherButton = document.getElementById('getWeatherButton')
 let city = document.getElementById('city')
 let cityInfo = document.getElementById('cityInfo')
@@ -31,8 +31,8 @@ async function retrieveData(zipcode) {
     try {
 let weatherData = await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`)
 return weatherData.data
-} catch (err) {
-    console.log(err)
+} catch (error) {
+    console.log(error)
     throw ('Failed to retrieve data')
 }
 }
@@ -51,7 +51,7 @@ let storage = {
 */ 
 
 // Not Complete and Confused 
-function displayData() {
+function displayData(data) {
 
     city.textContent = ''
     cityInfo.textContent = ''

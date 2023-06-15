@@ -13,22 +13,17 @@ let conditionInfo = document.getElementById('conditionInfo')
 let otherInfo = document.getElementById('otherInfo')
 let image = document.getElementById('image')
 
-let data = null
 let apiKey = 'aea26e52813982d4b13611732c43f397'
 
-/* This is just for figuring out the API. The retrieveData function should be called elsewhere. 
-window.addEventListener('load', init)
-async function init () {
-     data = await retrieveData(40503)
-     console.log(data)
-}
-*/
 
 // Not Complete and Confused 
-function verifyZipcode() {
+function verifyZipcode(zipcode) {
     if (zipcode.length != 5 || isNaN(zipcode)) {
         alert('Invalid Zip Code')
-    } 
+        return false
+    } else {
+        return true
+    }
 }
 
 // Not Complete and Confused 

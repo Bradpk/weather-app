@@ -1,3 +1,5 @@
+// Wtf am I doing
+// Do I even want these to be global? 
 let zipcode = document.getElementById('zipcode').value
 let getWeatherButton = document.getElementById('getWeatherButton')
 let city = document.getElementById('city')

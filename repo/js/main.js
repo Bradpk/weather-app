@@ -18,14 +18,14 @@ let apiUrl = 'http://api.openweathermap.org/geo/1.0/zip?zip={zip code},{country 
 
 
 // Not Complete and Confused 
-function verifyZipcode() {
+function verifyZipcode(zipcode) {
     if (zipcode.length != 5 || isNaN(zipcode)) {
         alert('Invalid Zip Code')
-    }
+    } 
 }
 
 // Not Complete and Confused 
-function retrieveData() {
+function retrieveData(verifyZipcode) {
 
     axios.get('http://api.openweathermap.org/geo/1.0/zip?zip={zip code},{country code}&appid={API key}')
         .then(function (response) { })

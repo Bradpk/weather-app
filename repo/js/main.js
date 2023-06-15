@@ -12,11 +12,17 @@ let condition = document.getElementById('condition')
 let conditionInfo = document.getElementById('conditionInfo')
 let otherInfo = document.getElementById('otherInfo')
 let image = document.getElementById('image')
+let data = null
 
 let apiKey = 'aea26e52813982d4b13611732c43f397'
 let apiUrl = 'http://api.openweathermap.org/'
 let apiPath = '/data/2.5/weather'
 
+// This is just for figuring out the API. The retrieveData function should be called elsewhere. 
+window.addEventListener('load', init)
+async function init () {
+     data = await retrieveData(40503)
+}
 
 // Not Complete and Confused 
 function verifyZipcode(zipcode) {
@@ -26,7 +32,8 @@ function verifyZipcode(zipcode) {
 }
 
 // Not Complete and Confused 
-function retrieveData(zipcode) {
+async function retrieveData(zipcode) {
+let weatherData = {}
 try {
 let options = {
     baseurl: apiUrl,
@@ -35,7 +42,7 @@ let options = {
         appid: apiKey
     }
 }
-axios.get(apiPath, options)
+await axios.get(apiPath, options)
 } catch (err) {
     // check screenshot for more info on the below
 message.innerHTML = 'Error: ' + err + '.'
@@ -63,9 +70,11 @@ function displayData() {
     image.textContent = ''
 }
 
+
 function convertFahrenheit(kelvin) {
 return (kelvin - 273.15) * (9/5) + 32
 }
+
 
 function convertCelsius(kelvin) {
     return (kelvin - 273.15)
@@ -76,6 +85,7 @@ function convertCelsius(kelvin) {
 getWeatherButton.addEventListener('click', () => {
     appear()
 })
+
 
 function hide() {
     city.style.display = 'none'
@@ -91,6 +101,7 @@ function hide() {
 }
 hide()
 
+
 function appear() {
     city.style.display = ''
     cityInfo.style.display = ''
@@ -105,3 +116,5 @@ function appear() {
 }
 
 console.log("hello world")
+
+return weatherData

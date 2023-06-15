@@ -1,6 +1,6 @@
 // Wtf am I even doing
 // Do I even want these to be global? 
-let zipcode = document.getElementById('zipcode').value
+let zipcodeInput = document.getElementById('zipcode').value
 let getWeatherButton = document.getElementById('getWeatherButton')
 let city = document.getElementById('city')
 let cityInfo = document.getElementById('cityInfo')
@@ -78,7 +78,17 @@ function convertCelsius(kelvin) {
 
 // Not Complete and Confused 
 getWeatherButton.addEventListener('click', () => {
-    appear()
+    let zipcode = zipcodeInput.value.trim()
+    if(verifyZipcode(zipcode) === true) {
+        try {
+            let data = await retrieveData(zipcode)
+            displayData(data)
+            appear()
+        } catch (error) {
+            console.log(error)
+            alert ('Failed to retrieve data')
+        }
+    }
 })
 
 

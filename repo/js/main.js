@@ -28,20 +28,20 @@ function verifyZipcode(zipcode) {
 
 // Not Complete and Confused 
 async function retrieveData(zipcode) {
-await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`)
-.then(response => {
- let weatherData = response.data
-})
-.catch (err =>  {
-})
-    return weatherData
+    try {
+let weatherData = await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`)
+return weatherData.data
+} catch (err) {
+    console.log(err)
+    throw ('Failed to retrieve data')
+}
 }
 
 
 
 
 
-//Object for storing data
+//Object for storing data. Don't this is needed anymore
 let storage = {
     city: '',
     temperature: '',

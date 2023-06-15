@@ -56,6 +56,6 @@ function displayData() {
 
 
 // Not Complete and Confused 
-document.getElementById('getWeatherButton').addEventListener('click', () => {
+getWeatherButton.addEventListener('click', () => {
 verifyZipcode(zipcode.value)
 })

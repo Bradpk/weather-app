@@ -65,7 +65,7 @@ function convertCelsius(kelvin) {
 
 // Not Complete and Confused 
 getWeatherButton.addEventListener('click', () => {
-    verifyZipcode(zipcode.value)
+    appear()
 })
 
 function hide() {
@@ -81,3 +81,16 @@ function hide() {
     image.style.display = 'none'
 }
 hide()
+
+function appear() {
+    city.style.display = ''
+    cityInfo.style.display = ''
+    temperature.style.display = ''
+    kelvin.style.display = ''
+    fahrenheit.style.display = ''
+    celsius.style.display = ''
+    condition.style.display = ''
+    conditionInfo.style.display = ''
+    otherInfo.style.display = ''
+    image.style.display = ''
+}

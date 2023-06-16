@@ -13,34 +13,39 @@
 
 <body>
     <div id='main'>
-    <h1>Weather App</h1>
+        <h1>Weather App</h1>
 
-    <div>
+    <div class="header">
     <label>Zip Code:</label>
     <input id="zipcode">
     <button id="getWeatherButton">Get Weather</button>
 </div>
 
-<div>
+<div class="container">
+    <div class="row">
+
+<div class="col-3">
     <h2 id="city"></h2>
     <p id="cityInfo"></p>
 </div>
 
-<div>
+<div class="col-3">
     <h2 id="temperature"></h2>
     <p id="kelvin"></p>
     <p id="fahrenheit"></p>
     <p id="celsius"></p>
 </div>
 
-<div>
+<div class="col-3">
     <h2 id="condition"></h2>
     <p id="conditionInfo"></p>
 </div>
 
-<div>
+<div class="col-3">
     <h2 id="otherInfo"></h2>
     <p id="otherInfoContent"></p>
+</div>
+</div>
 </div>
 
     <script src="/node_modules/axios/dist/axios.min.js"></script>

@@ -29,7 +29,7 @@ function verifyZipcode(zipcode) {
 // Not Complete and Confused 
 async function retrieveData(zipcode) {
     try {
-let weatherData = await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`)
+let weatherData = await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${apiKey}`)
 return weatherData.data
 } catch (error) {
     console.log(error)
@@ -53,16 +53,16 @@ let storage = {
 // Not Complete and Confused 
 function displayData(data) {
 
-    city.textContent = `city: `
-    cityInfo.textContent = `Zip Code: ${data.name}`
+    city.textContent = `City: `
+    cityInfo.textContent = `${data.name}`
     temperature.textContent = `Temperature: `
-    kelvin.textContent = `Kelvin: ${data.main.temp} K`
-    fahrenheit.textContent = `Fahrenheit: ${convertToFahrenheit(data.main.temp)}`
-    celsius.textContent = `Celsius: ${convertToCelsius(data.main.temp)}`
+    kelvin.textContent = `Kelvin: ${Math.round(data.main.temp)}`
+    fahrenheit.textContent = `Fahrenheit: ${Math.round(convertToFahrenheit(data.main.temp))}`
+    celsius.textContent = `Celsius: ${Math.round(convertToCelsius(data.main.temp))}`
     condition.textContent = `Condition: `
-    conditionInfo.textContent = `Description: ${data.weather[0].description}`
+    conditionInfo.textContent = `${data.weather[0].description}`
     otherInfo.textContent = `Other Info: `
-    otherInfoContent.textContent = `Humidty - ${data.main.humidity}, Pressure - ${data.main.pressure} hPA`
+    otherInfoContent.innerHTML = `Humidty  ${data.main.humidity}%<br>Pressure  ${data.main.pressure} hPA`
 }
 
 
@@ -83,7 +83,6 @@ getWeatherButton.addEventListener('click', async() => {
         try {
             let data = await retrieveData(zipcode)
             displayData(data)
-            appear()
         } catch (error) {
             console.log(error)
             alert ('Failed to retrieve data')

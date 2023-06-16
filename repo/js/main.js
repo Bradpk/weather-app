@@ -29,13 +29,13 @@ function verifyZipcode(zipcode) {
 // This uses axios to retrieve weather data from openweathermap.org 
 async function retrieveData(zipcode) {
     try {
-let weatherData = await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${apiKey}`)
-console.log(weatherData.data)
-return weatherData.data
-} catch (error) {
-    console.log(error)
-    throw ('Failed to retrieve data')
-}
+        let weatherData = await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${apiKey}`)
+        console.log(weatherData.data)
+        return weatherData.data
+    } catch (error) {
+        console.log(error)
+        throw ('Failed to retrieve data')
+    }
 }
 
 // This updates the html with the data retrieved from the api call
@@ -56,7 +56,7 @@ function displayData(data) {
 
 //This converts kelvin to fahrenheit 
 function convertToFahrenheit(kelvin) {
-return (kelvin - 273.15) * (9/5) + 32
+    return (kelvin - 273.15) * (9 / 5) + 32
 }
 
 // This converts kelvin to celsius 
@@ -70,15 +70,15 @@ function convertToCelsius(kelvin) {
 // It assigns the retrieveData function with zipcode as a parameter to a variable named data
 // It calls the displayData function with data as it's parameter. 
 // If the data isn't retrieved it creates an alert so the user can see something went wrong. 
-getWeatherButton.addEventListener('click', async() => {
+getWeatherButton.addEventListener('click', async () => {
     let zipcode = zipcodeInput.value.trim()
-    if(verifyZipcode(zipcode) === true) {
+    if (verifyZipcode(zipcode) === true) {
         try {
             let data = await retrieveData(zipcode)
             displayData(data)
         } catch (error) {
             console.log(error)
-            alert ('Failed to retrieve data')
+            alert('Failed to retrieve data')
         }
     }
 })

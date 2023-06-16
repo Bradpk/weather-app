@@ -11,7 +11,7 @@ let celsius = document.getElementById('celsius')
 let condition = document.getElementById('condition')
 let conditionInfo = document.getElementById('conditionInfo')
 let otherInfo = document.getElementById('otherInfo')
-let image = document.getElementById('image')
+let otherInfoContent = document.getElementById('otherInfoContent')
 
 let apiKey = 'aea26e52813982d4b13611732c43f397'
 
@@ -41,7 +41,7 @@ return weatherData.data
 
 
 
-/*Object for storing data. Don't this is needed anymore
+/*Object for storing data. Don't think this is needed anymore
 let storage = {
     city: '',
     temperature: '',
@@ -53,16 +53,16 @@ let storage = {
 // Not Complete and Confused 
 function displayData(data) {
 
-    city.textContent = `city: ${data.name}`
-    cityInfo.textContent = `Zip Code: ${zipCodeInput.value}`
-    temperature.textContent = `Temperature: ${data.main.temp} K`
+    city.textContent = `city: `
+    cityInfo.textContent = `Zip Code: ${data.name}`
+    temperature.textContent = `Temperature: `
     kelvin.textContent = `Kelvin: ${data.main.temp} K`
     fahrenheit.textContent = `Fahrenheit: ${convertToFahrenheit(data.main.temp)}`
     celsius.textContent = `Celsius: ${convertToCelsius(data.main.temp)}`
-    condition.textContent = `Condition: ${data.weather[0].main}`
+    condition.textContent = `Condition: `
     conditionInfo.textContent = `Description: ${data.weather[0].description}`
-    otherInfo.textContent = `Other Info: Humidty - ${data.main.humidity}, Pressure - ${data.main.pressure} hPA`
-    image.textContent = ''
+    otherInfo.textContent = `Other Info: `
+    otherInfoContent.textContent = `Humidty - ${data.main.humidity}, Pressure - ${data.main.pressure} hPA`
 }
 
 
@@ -81,7 +81,7 @@ getWeatherButton.addEventListener('click', async() => {
     let zipcode = zipcodeInput.value.trim()
     if(verifyZipcode(zipcode) === true) {
         try {
-            const data = await retrieveData(zipcode)
+            let data = await retrieveData(zipcode)
             displayData(data)
             appear()
         } catch (error) {
@@ -91,7 +91,7 @@ getWeatherButton.addEventListener('click', async() => {
     }
 })
 
-
+/* Don't think any of this is needed
 function hide() {
     city.style.display = 'none'
     cityInfo.style.display = 'none'
@@ -121,5 +121,5 @@ function appear() {
 }
 
 console.log("hello world")
-
+*/
 

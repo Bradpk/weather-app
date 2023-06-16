@@ -73,22 +73,38 @@ The HTML tags that will be used in JavaScript (document.getElementById)
 
 verifyZipcode
 (Function to check whether the user entered a valid zip code)<br>
+    // Takes the zipcode entered by the user as the parameter <br>
     // Zipcode must be exactly five integers with no other characters<br>
-    // Display some kind of error message if entered incorrectly<br>
+    // Display some kind of error message if entered incorrectly and return false<br>
+	// If entered correctly return true
 
 
 retrieveData 
 (Function to receive the data based off the entered zip code, make an API call based off that zip code and store the data in an object as key value pairs)<br>
-    // Takes the verified zip code input <br>
-    // Puts it into the API  .get request<br>
+    // Takes the verified zip code input as a parameter <br>
+    // Puts it into the API  .get request along with the API key.<br>
     // The received data is stored as properties in an object as key value pairs<br>
 
 
 displayData 
-(Function to change the content of the html elements based off the data in the object. Most of the html elements should be hidden until the user clicks the button)<br>
+(Function to change the content of the html elements based off the data retrieved from the .get request. Most of the html elements should be hidden until the user clicks the button)<br>
     // Updates the text content of the html variables based off the appropriate key value pair stored in the object. <br>
 
 ### Event Handlers:
 (addEventListener to set off the whole process) <br>
     // addEventListener attached to the “getWeatherbutton” variable. When clicked it will trigger the verifyZipcode function which sets off a domino effect triggering the retrieveData function and the displayData function
 
+
+
+
+### Revisions
+
+convertToFahrenheit
+(Function needed to convert kelvin to Fahrenheit)
+
+convertToCelsius 
+(Function needed to convert kelvin to Celsius)
+
+" The domino effect of triggering the functions can be done within the event handler, not the functions themselves. "
+
+" Don't need to create an object inside the retrieveData function because the data retrieved already is an object. "

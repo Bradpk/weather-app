@@ -82,7 +82,7 @@ verifyZipcode
 retrieveData 
 (Function to receive the data based off the entered zip code, make an API call based off that zip code and store the data in an object as key value pairs)<br>
     // Takes the verified zip code input as a parameter <br>
-    // Puts it into the API  .get request<br>
+    // Puts it into the API  .get request along with the API key.<br>
     // The received data is stored as properties in an object as key value pairs<br>
 
 
@@ -105,16 +105,6 @@ convertToFahrenheit
 convertToCelsius 
 (Function needed to convert kelvin to Celsius)
 
-hidden 
-(Function to keep the other elements hidden until the button is clicked)
-
-appear
-(Function to make the hidden elements visbile when the button is clicked)
-
-
-
 " The domino effect of triggering the functions can be done within the event handler, not the functions themselves. "
 
 " Don't need to create an object inside the retrieveData function because the data retrieved already is an object. "
-
-" The displayData function is also an object "

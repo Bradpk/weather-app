@@ -29,7 +29,7 @@ function verifyZipcode(zipcode) {
 // This uses axios to retrieve weather data from openweathermap.org 
 async function retrieveData(zipcode) {
     try {
-        let weatherData = await axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${apiKey}`) //fetch maybe?
+        let weatherData = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${apiKey}`) //fetch maybe?
         console.log(weatherData.data)
         return weatherData.data
     } catch (error) {

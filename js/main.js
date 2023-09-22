@@ -121,5 +121,3 @@ function appear() {
 
 console.log("hello world")
 */
-
-///weather-app/js/

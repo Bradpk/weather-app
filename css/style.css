@@ -32,7 +32,15 @@ h1 {
     font-size: 16px;
 }
 
+label {
+    font-size: 16px;
+}
+
 #zipcode {
-    width: 120px;
+    width: 90px;
     text-align: center;
+}
+
+#getWeatherButton {
+    font-size: 16px;
 }

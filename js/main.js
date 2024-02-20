@@ -41,15 +41,15 @@ async function retrieveData(zipcode) {
 // This updates the html with the data retrieved from the api call
 function displayData(data) {
 
-    city.textContent = `City: `
+    city.textContent = `City `
     cityInfo.textContent = `${data.name}`
-    temperature.textContent = `Temperature: `
+    temperature.textContent = `Temperature `
     kelvin.textContent = `Kelvin: ${Math.round(data.main.temp)}`
     fahrenheit.textContent = `Fahrenheit: ${Math.round(convertToFahrenheit(data.main.temp))}`
     celsius.textContent = `Celsius: ${Math.round(convertToCelsius(data.main.temp))}`
-    condition.textContent = `Condition: `
+    condition.textContent = `Condition `
     conditionInfo.textContent = `${data.weather[0].description}`
-    otherInfo.textContent = `Other Info: `
+    otherInfo.textContent = `Other Info `
     otherInfoContent.innerHTML = `Humidty  ${data.main.humidity}%<br>Pressure  ${data.main.pressure} hPA`
 }
 

@@ -1,12 +1,14 @@
 body{
     background-color: azure;
 }
+
 #main {
     color: black;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     
 }
+
 h1 {
     display: flex;
     justify-content: center;
@@ -29,3 +31,8 @@ h1 {
 .row p {
     font-size: 16px;
 }
+
+#input {
+    width: 50px;
+}
+

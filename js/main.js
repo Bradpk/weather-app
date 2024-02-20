@@ -44,7 +44,7 @@ function displayData(data) {
     city.textContent = `City `
     cityInfo.textContent = `${data.name}`
     temperature.textContent = `Temperature `
-    kelvin.textContent = `Kelvin: ${Math.round(data.main.temp)}`
+    // kelvin.textContent = `Kelvin: ${Math.round(data.main.temp)}`
     fahrenheit.textContent = `Fahrenheit: ${Math.round(convertToFahrenheit(data.main.temp))}`
     celsius.textContent = `Celsius: ${Math.round(convertToCelsius(data.main.temp))}`
     condition.textContent = `Condition `

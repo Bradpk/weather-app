@@ -24,15 +24,14 @@ h1 {
 }
 
 .row h2 {
-    font-size: 32px;
-    letter-spacing: 1px;
+    font-size: 30px;
+    letter-spacing: 0.5px;
 }
 
 .row p {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #zipcode {
-    width: 150px;
-    text-align: center;
+    width: 120px;
 }

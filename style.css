@@ -1,0 +1,60 @@
+/* body{
+    background-color: azure;
+} */
+
+.video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  #main {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 
+    -0.5px -0.5px 0 black,  
+     0.5px -0.5px 0 black,
+    -0.5px  0.5px 0 black,
+     0.5px  0.5px 0 black; 
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 77px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 77px;
+}
+
+.row h2 {
+    font-size: 40px;
+    letter-spacing: 0.5px;
+}
+
+.row p {
+    font-size: 20px;
+}
+
+label {
+    font-size: 16px;
+}
+
+#zipcode {
+    width: 90px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#getWeatherButton {
+    font-size: 16px;
+}

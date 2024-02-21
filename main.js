@@ -56,6 +56,8 @@ function displayData(data) {
     document.getElementById('home-video').style.display = 'none';
     document.getElementById('rain-video').style.display = 'none';
     document.getElementById('cloud-video').style.display = 'none';
+    document.getElementById('snow-video').style.display = 'none';
+
 
 
 
@@ -64,6 +66,8 @@ function displayData(data) {
         document.getElementById('clear-video').style.display = 'block';
     } else if (data.weather[0].description.toLowerCase().includes('rain')) {
         document.getElementById('rain-video').style.display = 'block';
+    } else if (data.weather[0].description.toLowerCase().includes('snow')) {
+        document.getElementById('snow-video').style.display = 'block';
     } else if (data.weather[0].description.toLowerCase().includes('clouds')) {
         document.getElementById('cloud-video').style.display = 'block';
     } else {

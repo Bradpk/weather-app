@@ -9,6 +9,7 @@
     width: auto;
     height: 100vh;
     z-index: -1;
+    display: block;
   }
 
   #main {
@@ -37,12 +38,12 @@ h1 {
 }
 
 .row h2 {
-    font-size: 40px;
-    letter-spacing: 0.5px;
+    font-size: 36px;
+    letter-spacing: 0.3px;
 }
 
 .row p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 label {

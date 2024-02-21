@@ -51,6 +51,16 @@ function displayData(data) {
     conditionInfo.textContent = `${data.weather[0].description}`
     otherInfo.textContent = `Other Info `
     otherInfoContent.innerHTML = `Humidty  ${data.main.humidity}%<br>Pressure  ${data.main.pressure} hPA`
+
+    document.getElementById('clear-video').style.display = 'none';
+    document.getElementById('home-video').style.display = 'none';
+
+
+    if (data.weather[0].description.toLowerCase().includes('clear')) {
+        document.getElementById('clear-video').style.display = 'block';
+    } else {
+        document.getElementById('home-video').style.display = 'block';
+    }
 }
 
 

@@ -57,6 +57,8 @@ function displayData(data) {
     document.getElementById('rain-video').style.display = 'none';
     document.getElementById('cloud-video').style.display = 'none';
     document.getElementById('snow-video').style.display = 'none';
+    document.getElementById('mist-video').style.display = 'none';
+
 
 
 
@@ -64,9 +66,17 @@ function displayData(data) {
 
     if (data.weather[0].description.toLowerCase().includes('clear')) {
         document.getElementById('clear-video').style.display = 'block';
+    } else if (data.weather[0].description.toLowerCase().includes('thunderstorm')) {
+        document.getElementById('rain-video').style.display = 'block';
+    } else if (data.weather[0].description.toLowerCase().includes('drizzle')) {
+        document.getElementById('rain-video').style.display = 'block';
+    } else if (data.weather[0].description.toLowerCase().includes('mist')) {
+        document.getElementById('mist-video').style.display = 'block';
     } else if (data.weather[0].description.toLowerCase().includes('rain')) {
         document.getElementById('rain-video').style.display = 'block';
     } else if (data.weather[0].description.toLowerCase().includes('snow')) {
+        document.getElementById('snow-video').style.display = 'block';
+    } else if (data.weather[0].description.toLowerCase().includes('sleet')) {
         document.getElementById('snow-video').style.display = 'block';
     } else if (data.weather[0].description.toLowerCase().includes('clouds')) {
         document.getElementById('cloud-video').style.display = 'block';

@@ -68,6 +68,8 @@ function displayData(data) {
         document.getElementById('clear-video').style.display = 'block';
     } else if (data.weather[0].description.toLowerCase().includes('thunderstorm')) {
         document.getElementById('rain-video').style.display = 'block';
+    } else if (data.weather[0].description.toLowerCase().includes('haze')) {
+        document.getElementById('mist-video').style.display = 'block';
     } else if (data.weather[0].description.toLowerCase().includes('drizzle')) {
         document.getElementById('rain-video').style.display = 'block';
     } else if (data.weather[0].description.toLowerCase().includes('mist')) {
@@ -120,36 +122,3 @@ getWeatherButton.addEventListener('click', async () => {
 
 
 
-
-
-
-/* Trash, not needed.
-function hide() {
-    city.style.display = 'none'
-    cityInfo.style.display = 'none'
-    temperature.style.display = 'none'
-    kelvin.style.display = 'none'
-    fahrenheit.style.display = 'none'
-    celsius.style.display = 'none'
-    condition.style.display = 'none'
-    conditionInfo.style.display = 'none'
-    otherInfo.style.display = 'none'
-    image.style.display = 'none'
-}
-hide()
-
-function appear() {
-    city.style.display = ''
-    cityInfo.style.display = ''
-    temperature.style.display = ''
-    kelvin.style.display = ''
-    fahrenheit.style.display = ''
-    celsius.style.display = ''
-    condition.style.display = ''
-    conditionInfo.style.display = ''
-    otherInfo.style.display = ''
-    image.style.display = ''
-}
-
-console.log("hello world")
-*/

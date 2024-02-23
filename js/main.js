@@ -59,11 +59,6 @@ function displayData(data) {
     document.getElementById('snow-video').style.display = 'none';
     document.getElementById('mist-video').style.display = 'none';
 
-
-
-
-
-
     if (data.weather[0].description.toLowerCase().includes('clear')) {
         document.getElementById('clear-video').style.display = 'block';
     } else if (data.weather[0].description.toLowerCase().includes('thunderstorm')) {
@@ -105,17 +100,24 @@ function convertToCelsius(kelvin) {
 // It calls the displayData function with data as it's parameter. 
 // If the data isn't retrieved it creates an alert so the user can see something went wrong. 
 getWeatherButton.addEventListener('click', async () => {
-    let zipcode = zipcodeInput.value.trim()
+    let zipcode = zipcodeInput.value.trim();
     if (verifyZipcode(zipcode) === true) {
         try {
-            let data = await retrieveData(zipcode)
-            displayData(data)
+            let data = await retrieveData(zipcode);
+            displayData(data);
         } catch (error) {
-            console.log(error)
-            alert('Failed to retrieve data')
+            console.log(error);
+            alert('Failed to retrieve data');
         }
     }
-})
+});
+
+zipcodeInput.addEventListener('keypress', async (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault(); 
+        getWeatherButton.click(); 
+    }
+});
 
 
 

@@ -9,18 +9,22 @@
     width: auto;
     height: 100vh;
     z-index: -1;
-    display: block;
+    display: none;
   }
+
+  #home-video {
+    display: block;
+}
 
   #main {
     color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     text-shadow: 
-    -0.7px -0.7px 0 black,  
-     0.7px -0.7px 0 black,
-    -0.7px  0.7px 0 black,
-     0.7px  0.7px 0 black; 
+    -0.8px -0.8px 0 black,  
+     0.8px -0.8px 0 black,
+    -0.8px  0.8px 0 black,
+     0.8px  0.8px 0 black; 
 }
 
 h1 {
@@ -41,16 +45,16 @@ h1 {
 }
 
 .row h2 {
-    font-size: 33px;
+    font-size: 34px;
     letter-spacing: 0.4px;
 }
 
 .row p {
-    font-size: 22px;
+    font-size: 23px;
 }
 
 label {
-    font-size: 18px;
+    font-size: 19px;
 }
 
 #zipcode {

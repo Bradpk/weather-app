@@ -7,4 +7,5 @@ This project is a weather app that retrieves weather data based on a user-entere
 Axios, 
 JavaScript, 
 HTML, 
-CSS
+CSS,
+Bootstrap

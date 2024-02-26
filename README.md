@@ -4,7 +4,7 @@ This project is a weather app that retrieves weather data based on a user-entere
 
 ### Tech Stack
 
-Axios 
-JavaScript
-HTML 
+Axios, 
+JavaScript, 
+HTML, 
 CSS

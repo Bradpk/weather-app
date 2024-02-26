@@ -1,3 +1,10 @@
-This is a project that uses an axios to make a api get request to display weather data based off a zipcode. 
+### Weather App
 
-The api is currently failing to retrieve the data after deploying to github pages. Will come back to this. 
+This project is a weather app that retrieves weather data based on a user-entered zip code using an API. It displays the city name, temperature in both Fahrenheit and Celsius, weather condition, humidity, and barometric pressure. To add a visual element, the app dynamically renders a moving background that corresponds to the weather condition from the provided zip code.
+
+### Tech Stack
+
+Axios 
+JavaScript
+HTML 
+CSS

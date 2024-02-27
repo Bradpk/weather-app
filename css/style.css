@@ -68,7 +68,7 @@ label {
 }
 
 .fade-in {
-    animation: fadeIn 5s ease-in-out;
+    animation: fadeIn 4s ease-in-out;
 }
 
 @keyframes fadeIn {
